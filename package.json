@@ -1,7 +1,8 @@
 {
-  "name": "mantraocr",
+  "name": "aksharadhara",
   "version": "1.0.0",
-  "description": "This is a web-based application designed to help users digitize, manage, and practice sacred mantras with proper pitch notation. The tool uses a simple, single-page interface to extract Sanskrit and Telugu text from images, allowing for detailed editing and the addition of traditional pitch marks before saving the data directly in the browser.",
+  "private": true,
+  "description": "Aksharadhara: Indic OCR web app for Telugu, Sanskrit, Hindi and English, with Vedic swara (pitch) marking and mantra management. Uses open-source Tesseract.js; works in the browser as a PWA.",
   "main": "Aksharadhara.js",
   "scripts": {
     "start": "npx serve .",
@@ -9,18 +10,18 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "@yuktishaalaa/yuktai": "^2.0.2",
+    "@yuktishaalaa/yuktai": "^5.3.10",
     "node-fetch": "^3.3.2"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sandeepmiriyala03/MantraOcr.git"
+    "url": "git+https://github.com/sandeepmiriyala03/Aksharadhara.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["ocr", "telugu", "sanskrit", "hindi", "vedic", "swara", "tesseract", "pwa", "accessibility"],
+  "author": "Sandeep Miriyala",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/sandeepmiriyala03/MantraOcr/issues"
+    "url": "https://github.com/sandeepmiriyala03/Aksharadhara/issues"
   },
-  "homepage": "https://github.com/sandeepmiriyala03/MantraOcr#readme"
+  "homepage": "https://github.com/sandeepmiriyala03/Aksharadhara#readme"
 }
