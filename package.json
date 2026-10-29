@@ -19,7 +19,7 @@
   },
   "keywords": ["ocr", "telugu", "sanskrit", "hindi", "vedic", "swara", "tesseract", "pwa", "accessibility"],
   "author": "Sandeep Miriyala",
-  "license": "ISC",
+  "license": "GPL-3.0-only",
   "bugs": {
     "url": "https://github.com/sandeepmiriyala03/Aksharadhara/issues"
   },

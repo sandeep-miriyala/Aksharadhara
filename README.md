@@ -1,46 +1,77 @@
-### `README.md`
+# Aksharadhara (అక్షరధార)
 
-### **Project Name: Sanskrit / Telugu OCR & Mantra Manager**
+[![license](https://img.shields.io/badge/license-GPL--3.0-blue)](./LICENSE)
+[![live](https://img.shields.io/badge/live-aksharadhara.netlify.app-0a4a85)](https://aksharadhara.netlify.app/)
+[![PWA](https://img.shields.io/badge/PWA-installable-5a0fc8)](https://aksharadhara.netlify.app/)
+[![XERJ Corpus Hub contributor](https://hub.xerj.org/contributors/sandeepmiriyala03/badge.svg)](https://hub.xerj.org/contributors/sandeepmiriyala03)
 
-This is a web-based application designed to help users digitize, manage, and practice sacred mantras with proper pitch notation. The tool uses a simple, single-page interface to extract Sanskrit and Telugu text from images, allowing for detailed editing and the addition of traditional pitch marks before saving the data directly in the browser.
+**Sanskrit / Telugu OCR & Mantra Manager.** Turn photos of Telugu, Sanskrit, Hindi and English text into editable text, mark Vedic pitch (swara) on mantras, and keep your collection in the browser.
 
----
+🌐 **Live:** https://aksharadhara.netlify.app/
 
-### **Features**
-
-* **Image to Text (OCR):** Uses Tesseract.js to convert images containing Sanskrit or Telugu script into editable text.
-* **Pitch Marking:** Allows users to mark syllables as high-pitched (**స్వరితం
-**) or low-pitched (**అనుదాత్తం**) using traditional Vedic notations (a vertical line above and a horizontal line below).
-* **Local Storage:** All mantras and their associated pitch marks are saved directly to your browser's local storage, ensuring your data persists between sessions.
-* **Mantra Management:** Users can save new mantras, view existing ones, and edit or delete them.
-* **JSON Export:** The application includes a "Download JSON" button to export your complete mantra collection to a `ritualsMantras.json` file.
+Runs in your browser as an installable app (PWA). Images are read on your device; nothing is uploaded.
 
 ---
 
-### **Technologies Used**
+## Features
 
-* **HTML:** For the application structure.
-* **CSS:** For styling and layout.
-* **JavaScript:** For all interactive functionality, including OCR, pitch marking, and local storage management.
-* **Tesseract.js:** An open-source OCR library used to process images.
-* **Google Fonts:** `Noto Sans Telugu` and `Roboto` for clear and readable typography.
+| | Feature | What it does |
+|---|---|---|
+| 📷 | **Image to text (OCR)** | Reads Telugu, Sanskrit, Hindi and English from an image using [Tesseract.js](https://github.com/naptha/tesseract.js) |
+| 🎵 | **Pitch marking** | Marks a syllable as high (**స్వరితం**, a vertical line above) or low (**అనుదాత్తం**, a horizontal line below) |
+| 💾 | **Saved in your browser** | Mantras and their pitch marks stay in local storage between visits |
+| 📝 | **Mantra manager** | Save, view, edit and delete mantras |
+| ⬇️ | **Export** | "Download" saves your whole collection as JSON in `all_mantras.txt` |
+| ✍️ | **Handwriting (experimental)** | Telugu handwriting OCR with TensorFlow.js models (`HandWrite.html`) |
+| ♿ | **Accessibility** | Accessibility settings by [YuktAI](https://www.npmjs.com/package/@yuktishaalaa/yuktai) |
 
----
+## Pages
 
-### **How to Use**
+| Page | File |
+|---|---|
+| Home | `index.html` |
+| Mantra OCR + pitch marking | `aksharadhara.html` |
+| Sanskrit OCR | `sanskrit.html` |
+| Telugu OCR | `Telugu.html` |
+| Hindi OCR | `Hindi.html` |
+| English OCR | `english.html` |
+| Shukla Yajurveda | `ShuklaYajurveda.html` |
+| Krishna Yajurveda (Shruti Sankalanam) | `shruti-sankalanam.html` |
+| Telugu handwriting OCR | `HandWrite.html` |
 
-1.  **Save the File:** Download the `MantraGenration.html` file and open it in any modern web browser (like Chrome, Firefox, or Edge).
-2.  **Upload an Image:** Click the **"Upload Image"** button and select an image file containing the mantra you want to digitize.
-3.  **Start OCR:** Once the image is loaded, click **"Start OCR"**. The extracted text will appear in the text area below.
-4.  **Edit & Mark Pitches:**
-    * Correct any errors in the extracted text.
-    * Select a word or syllable and click **"High Pitch"** or **"Low Pitch"** to add the corresponding pitch mark.
-5.  **Save the Mantra:** Enter a title and description, then click **"Save New Mantra"** to store it.
-6.  **View & Edit Saved Mantras:** Use the tabs in the **"View & Edit Mantras"** section to see your saved mantras. You can click **"Edit Mantra"** to load it back into the OCR section for further changes.
-7.  **Download Your Data:** Click **"Download JSON"** to save your entire collection as a `ritualsMantras.json` file.
+## How to use
 
----
+1. Open **Mantra OCR** (`aksharadhara.html`).
+2. Click **Upload Image** and choose a photo of the mantra.
+3. Click **Start OCR**. The text appears in the box below.
+4. Fix any mistakes. Select a syllable and click **High Pitch** or **Low Pitch**.
+5. Add a title and description, then click **Save New Mantra**.
+6. Your saved mantras appear under **View & Edit Mantras**. Use **Edit Mantra** to change one, or delete it.
+7. Click **Download** to keep a copy of everything (`all_mantras.txt`).
 
-### **File Structure**
+> Clearing your browser data deletes saved mantras. Download a copy first.
 
-This is a self-contained single-page application, so all the code is within one `MantraGenration.html` file. There are no external dependencies other than the Tesseract.js library and Google Fonts, which are loaded from CDNs.
+## Run locally
+
+```bash
+git clone https://github.com/sandeepmiriyala03/Aksharadhara.git
+cd Aksharadhara
+npm install
+npm start          # serves the folder, then open the address it prints
+```
+
+Open the pages through a local server (not as a `file://` path), so the app and OCR can load.
+
+## Built with
+
+HTML, CSS and JavaScript · [Tesseract.js](https://github.com/naptha/tesseract.js) (open-source OCR) · TensorFlow.js · Google Fonts (`Noto Sans Telugu`, `Roboto`) · [YuktAI](https://www.npmjs.com/package/@yuktishaalaa/yuktai) · Netlify
+
+## Credits
+
+The text recognition comes from the open-source Tesseract.js project and its language data. Aksharadhara adds the Indic pages, pitch marking and mantra management on top.
+
+## License
+
+[GPL-3.0](./LICENSE) © Sandeep Miriyala. You may use, change and share this project; changed versions you share must stay open under GPL-3.0.
+
+Third-party parts keep their own licences: Tesseract.js and TensorFlow.js (Apache-2.0), YuktAI (GPL-3.0), Google Fonts (SIL Open Font License).
